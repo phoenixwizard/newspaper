@@ -852,7 +852,7 @@ class ContentExtractor(object):
         node = self.add_siblings(top_node)
         for e in self.parser.getChildren(node):
             e_tag = self.parser.getTag(e)
-            if e_tag != 'p' and e_tag != 'img':
+            if e_tag != 'p' and e_tag != 'img'and e_tag != 'figure':
                 if self.is_highlink_density(e) \
                         or self.is_table_and_no_para_exist(e) \
                         or not self.is_nodescore_threshold_met(node, e):
